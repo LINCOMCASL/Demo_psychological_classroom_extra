@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://hg7v4m1ryhtw"
+path="res://.godot/imported/with_blackboard.dialogue-40da3735ff47eda3f591ef91c12ab0a4.tres"
+
+[deps]
+
+source_file="res://with_blackboard.dialogue"
+dest_files=["res://.godot/imported/with_blackboard.dialogue-40da3735ff47eda3f591ef91c12ab0a4.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvbr1q0hywvv8"]
+
+[ext_resource type="Texture2D" uid="uid://bumsehx2xdfbu" path="res://assets/2/Ash_sit_11.png" id="1_o4ick"]
+[ext_resource type="Texture2D" uid="uid://blv2nsfjrepcy" path="res://assets/2/Ash_sit_12.png" id="2_rdenv"]
+[ext_resource type="Texture2D" uid="uid://d3svogdnhh6bc" path="res://assets/2/Ash_sit_13.png" id="3_mw3vb"]
+[ext_resource type="Texture2D" uid="uid://ccnhht7181m8r" path="res://assets/2/Ash_sit_14.png" id="4_2kbrr"]
+[ext_resource type="Texture2D" uid="uid://b2t0w5eooe142" path="res://assets/2/Ash_sit_15.png" id="5_tu70n"]
+[ext_resource type="Texture2D" uid="uid://d2ko48l5nac6r" path="res://assets/2/Ash_sit_16.png" id="6_sr2yk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqyjg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o4ick")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rdenv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mw3vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2kbrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tu70n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sr2yk")
+}],
+"loop": true,
+"name": &"siting",
+"speed": 5.0
+}]
+
+[node name="Classmate1" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hqyjg")
+animation = &"siting"
+autoplay = "siting"
+frame_progress = 0.627019
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-13, 15, 7, 15, 8, 0, -12, 0)

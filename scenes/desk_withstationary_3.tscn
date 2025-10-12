@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3b8amhlhxbgb"]
+
+[ext_resource type="Texture2D" uid="uid://cuoqf772u83px" path="res://assets/objects/desk_3.png" id="1_w1epa"]
+
+[node name="Desk_withstationary3" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w1epa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-24, 18, 24, 18, 24, -21, -24, -21)

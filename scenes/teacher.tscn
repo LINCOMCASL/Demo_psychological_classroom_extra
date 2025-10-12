@@ -1,0 +1,70 @@
+[gd_scene load_steps=15 format=3 uid="uid://dkx3fl4nm6akv"]
+
+[ext_resource type="Texture2D" uid="uid://b6fotr6q78qfn" path="res://assets/3/Alex_phone_1.png" id="1_k0qh8"]
+[ext_resource type="Script" uid="uid://bnjceno7mp0hx" path="res://scenes/teacher.gd" id="1_qk53y"]
+[ext_resource type="Texture2D" uid="uid://c1g7cu1q4yix7" path="res://assets/3/Alex_phone_2.png" id="2_wbkex"]
+[ext_resource type="Texture2D" uid="uid://l3ywqdo7hco0" path="res://assets/3/Alex_phone_3.png" id="3_kao3h"]
+[ext_resource type="Texture2D" uid="uid://c3gggavrx8aq0" path="res://assets/3/Alex_phone_4.png" id="4_t7t0s"]
+[ext_resource type="Texture2D" uid="uid://lprb2jc1kos6" path="res://assets/3/Alex_phone_5.png" id="5_gh2xn"]
+[ext_resource type="Texture2D" uid="uid://dibenkrgp7dnw" path="res://assets/3/Alex_phone_6.png" id="6_ouc0r"]
+[ext_resource type="Texture2D" uid="uid://c6yyquyujjn2h" path="res://assets/3/Alex_phone_7.png" id="7_jq4vs"]
+[ext_resource type="Texture2D" uid="uid://c1m0pxwg4r3vt" path="res://assets/3/Alex_phone_8.png" id="8_cbhlh"]
+[ext_resource type="Texture2D" uid="uid://ojblhy6d02e3" path="res://assets/3/Alex_phone_9.png" id="9_notaj"]
+[ext_resource type="PackedScene" uid="uid://cm0fdcshqf3sx" path="res://交互/actionable.tscn" id="11_p1ukm"]
+[ext_resource type="Resource" uid="uid://daw3trse6txxw" path="res://with_teacher.dialogue" id="12_6ymb6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xomnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k0qh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wbkex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kao3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t7t0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gh2xn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ouc0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jq4vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cbhlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_notaj")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ymb6"]
+radius = 30.0666
+
+[node name="Teacher" type="StaticBody2D"]
+script = ExtResource("1_qk53y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xomnj")
+animation = &"standing"
+autoplay = "standing"
+frame_progress = 0.238311
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, 16, 8, 16, 8, 6, -10, 6)
+
+[node name="Actionable" parent="." instance=ExtResource("11_p1ukm")]
+dialogue_resource = ExtResource("12_6ymb6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+shape = SubResource("CircleShape2D_6ymb6")

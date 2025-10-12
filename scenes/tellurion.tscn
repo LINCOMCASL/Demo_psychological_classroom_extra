@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx3solistrsie"]
+
+[ext_resource type="Texture2D" uid="uid://16pv77hkyhtx" path="res://assets/objects/tellurion_0.png" id="1_sc20e"]
+
+[node name="Tellurion" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sc20e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-14, 20, -9, 29, 10, 29, 14, 20)

@@ -1,0 +1,259 @@
+[gd_scene load_steps=34 format=3 uid="uid://8g7ros3v3t1u"]
+
+[ext_resource type="Texture2D" uid="uid://bl3cne5hrpia" path="res://assets/background.png" id="1_1wd8f"]
+[ext_resource type="PackedScene" uid="uid://dvgskqenafhsu" path="res://player.tscn" id="1_i5757"]
+[ext_resource type="PackedScene" uid="uid://bcgfuh08blmhj" path="res://scenes/door.tscn" id="3_4lpyf"]
+[ext_resource type="PackedScene" uid="uid://dwvfe4jhob3nj" path="res://scenes/desk.tscn" id="4_khlbe"]
+[ext_resource type="PackedScene" uid="uid://yi7rd6dj2hef" path="res://scenes/table.tscn" id="5_pfpy6"]
+[ext_resource type="PackedScene" uid="uid://b7jdmxfpiwypd" path="res://scenes/bookshelf.tscn" id="6_bg5li"]
+[ext_resource type="PackedScene" uid="uid://cot3igyd0dh1k" path="res://scenes/blackboard.tscn" id="7_w2ps3"]
+[ext_resource type="PackedScene" uid="uid://780tvlsjj20q" path="res://scenes/nesboard.tscn" id="8_26ehh"]
+[ext_resource type="Resource" uid="uid://hg7v4m1ryhtw" path="res://with_blackboard.dialogue" id="8_kq58d"]
+[ext_resource type="PackedScene" uid="uid://bs1d3nqsefkl" path="res://scenes/window_red.tscn" id="9_4tg6t"]
+[ext_resource type="PackedScene" uid="uid://dodflohj04ds4" path="res://scenes/chair_up.tscn" id="10_yaoig"]
+[ext_resource type="Resource" uid="uid://ckqaeayqpl3fc" path="res://with_curtain.dialogue" id="11_htxhm"]
+[ext_resource type="PackedScene" uid="uid://cnrlxm6cuh8dq" path="res://scenes/chair_back.tscn" id="11_lwcoe"]
+[ext_resource type="PackedScene" uid="uid://b7v52t44pcftk" path="res://scenes/desk_with_stationary_1.tscn" id="12_qanhs"]
+[ext_resource type="PackedScene" uid="uid://bhhu7ti56mi0q" path="res://scenes/desk_withstationary_2.tscn" id="13_xypfi"]
+[ext_resource type="PackedScene" uid="uid://b3b8amhlhxbgb" path="res://scenes/desk_withstationary_3.tscn" id="14_s4gut"]
+[ext_resource type="PackedScene" uid="uid://ctdmktdotb5s7" path="res://scenes/classbox.tscn" id="15_1r7vc"]
+[ext_resource type="PackedScene" uid="uid://pm8h8i7n86mp" path="res://scenes/bookshelf_lower.tscn" id="16_0kwsf"]
+[ext_resource type="PackedScene" uid="uid://jscqv5wyghew" path="res://scenes/desk&chair_vertical.tscn" id="17_5wato"]
+[ext_resource type="PackedScene" uid="uid://r8615sogbpl4" path="res://scenes/window_brown.tscn" id="19_npqaj"]
+[ext_resource type="PackedScene" uid="uid://3r2ffxpj13qm" path="res://scenes/map.tscn" id="20_rt2tu"]
+[ext_resource type="PackedScene" uid="uid://bgcoun6kirmuv" path="res://scenes/table_vertical.tscn" id="21_3xyg7"]
+[ext_resource type="PackedScene" uid="uid://dx3solistrsie" path="res://scenes/tellurion.tscn" id="22_jc6si"]
+[ext_resource type="PackedScene" uid="uid://c81fcqnyvmtar" path="res://scenes/desk_vertical.tscn" id="23_xmlcy"]
+[ext_resource type="PackedScene" uid="uid://b825421swayxb" path="res://scenes/backboard.tscn" id="23_y8vkm"]
+[ext_resource type="PackedScene" uid="uid://d3p37f17gk37w" path="res://scenes/chair_vertical.tscn" id="24_f82a7"]
+[ext_resource type="PackedScene" uid="uid://bleiraap8dle3" path="res://scenes/classmate.tscn" id="25_62kci"]
+[ext_resource type="PackedScene" uid="uid://cvbr1q0hywvv8" path="res://scenes/classmate_1.tscn" id="26_701u2"]
+[ext_resource type="PackedScene" uid="uid://dkx3fl4nm6akv" path="res://scenes/teacher.tscn" id="27_s8oi1"]
+[ext_resource type="PackedScene" uid="uid://bykpmmswklldk" path="res://scenes/classmate_3.tscn" id="28_i6q0e"]
+[ext_resource type="PackedScene" uid="uid://c4tuvvqhe02qx" path="res://scenes/chair_back_sustainguy.tscn" id="29_bmdw8"]
+[ext_resource type="Resource" uid="uid://daw3trse6txxw" path="res://with_teacher.dialogue" id="30_jq2sk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsp4k"]
+
+[node name="main" type="Node2D"]
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_1wd8f")
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries"]
+position = Vector2(0, 34)
+polygon = PackedVector2Array(504, 235, 937, 236, 937, 192, 503, 194)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(504, 234, 504, 800, 483, 800, 483, 176, 503, 176)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(937, 175, 956, 175, 956, 607, 937, 607)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Boundaries"]
+position = Vector2(1, 46)
+polygon = PackedVector2Array(503, 609, 551, 608, 551, 656, 503, 655)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Boundaries"]
+position = Vector2(1, 45)
+polygon = PackedVector2Array(600, 609, 938, 608, 936, 657, 600, 656)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(482, 801, 482, 816, 1386, 820, 1386, 799)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Boundaries"]
+position = Vector2(1, 46)
+polygon = PackedVector2Array(1078, 609, 1078, 656, 937, 655, 938, 610)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Boundaries"]
+position = Vector2(0, 48)
+polygon = PackedVector2Array(1128, 609, 1127, 655, 1366, 657, 1368, 610)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(1388, 798, 1370, 798, 1369, 320, 1389, 320)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(1011, 317, 1014, 609, 1029, 609, 1030, 320)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Boundaries"]
+position = Vector2(1, 47)
+polygon = PackedVector2Array(1032, 367, 1368, 370, 1368, 337, 1032, 337)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(503, 609, 551, 609, 551, 655, 504, 655, 501, 607)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(601, 609, 600, 655, 1077, 655, 1079, 609)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(1128, 608, 1128, 657, 1368, 658, 1368, 609)
+
+[node name="SortableObjects" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="SortableObjects" instance=ExtResource("1_i5757")]
+position = Vector2(675, 265)
+
+[node name="Door_1" parent="SortableObjects" instance=ExtResource("3_4lpyf")]
+position = Vector2(576, 631)
+
+[node name="Door_2" parent="SortableObjects" instance=ExtResource("3_4lpyf")]
+position = Vector2(1103, 631)
+
+[node name="Desk_1" parent="SortableObjects" instance=ExtResource("4_khlbe")]
+position = Vector2(756, 508)
+
+[node name="Table" parent="SortableObjects" instance=ExtResource("5_pfpy6")]
+position = Vector2(764, 324)
+
+[node name="Bookshelf" parent="SortableObjects" instance=ExtResource("6_bg5li")]
+position = Vector2(547, 244)
+
+[node name="Blackboard" parent="SortableObjects" instance=ExtResource("7_w2ps3")]
+position = Vector2(679, 230)
+dialogue_resource = ExtResource("8_kq58d")
+
+[node name="Nesboard" parent="SortableObjects" instance=ExtResource("8_26ehh")]
+position = Vector2(772, 226)
+
+[node name="Window_red" parent="SortableObjects" instance=ExtResource("9_4tg6t")]
+position = Vector2(872, 233)
+dialogue_resource = ExtResource("11_htxhm")
+
+[node name="Chair_up" parent="SortableObjects" instance=ExtResource("10_yaoig")]
+position = Vector2(910, 291)
+
+[node name="Desk_2" parent="SortableObjects" instance=ExtResource("4_khlbe")]
+position = Vector2(657, 417)
+
+[node name="Desk_3" parent="SortableObjects" instance=ExtResource("4_khlbe")]
+position = Vector2(913, 569)
+
+[node name="Desk_4" parent="SortableObjects" instance=ExtResource("4_khlbe")]
+position = Vector2(528, 513)
+
+[node name="Desk_5" parent="SortableObjects" instance=ExtResource("4_khlbe")]
+position = Vector2(528, 568)
+
+[node name="Desk_with_stationary1" parent="SortableObjects" instance=ExtResource("12_qanhs")]
+position = Vector2(609, 411)
+
+[node name="Desk_withstationary2" parent="SortableObjects" instance=ExtResource("13_xypfi")]
+position = Vector2(705, 414)
+
+[node name="Desk_with_stationary2" parent="SortableObjects" instance=ExtResource("12_qanhs")]
+position = Vector2(708, 502)
+
+[node name="Desk_withstationary3" parent="SortableObjects" instance=ExtResource("13_xypfi")]
+position = Vector2(660, 505)
+
+[node name="Chair_back2" parent="SortableObjects" instance=ExtResource("11_lwcoe")]
+position = Vector2(710, 561)
+
+[node name="Desk_withstationary4" parent="SortableObjects" instance=ExtResource("14_s4gut")]
+position = Vector2(815, 416)
+
+[node name="Chair_back4" parent="SortableObjects" instance=ExtResource("11_lwcoe")]
+position = Vector2(706, 458)
+
+[node name="Classbox" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
+position = Vector2(659, 679)
+
+[node name="Classbox2" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
+position = Vector2(806, 679)
+
+[node name="Classbox3" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
+position = Vector2(757, 679)
+
+[node name="Classbox4" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
+position = Vector2(708, 679)
+
+[node name="Bookshelf_lower" parent="SortableObjects" instance=ExtResource("16_0kwsf")]
+position = Vector2(885, 687)
+
+[node name="Classbox5" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
+position = Vector2(961, 680)
+
+[node name="Classbox6" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
+position = Vector2(1015, 680)
+
+[node name="Classbox7" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
+position = Vector2(1195, 679)
+
+[node name="Bookshelf_lower2" parent="SortableObjects" instance=ExtResource("16_0kwsf")]
+position = Vector2(1264, 685)
+
+[node name="Desk&Chair_vertical" parent="SortableObjects" instance=ExtResource("17_5wato")]
+position = Vector2(1079, 454)
+
+[node name="Desk&Chair_vertical2" parent="SortableObjects" instance=ExtResource("17_5wato")]
+position = Vector2(1178, 544)
+
+[node name="Window_brown" parent="SortableObjects" instance=ExtResource("19_npqaj")]
+position = Vector2(1202, 377)
+
+[node name="Map" parent="SortableObjects" instance=ExtResource("20_rt2tu")]
+position = Vector2(1315, 372)
+
+[node name="Table_vertical" parent="SortableObjects" instance=ExtResource("21_3xyg7")]
+position = Vector2(1312, 508)
+
+[node name="Tellurion" parent="SortableObjects/Table_vertical" instance=ExtResource("22_jc6si")]
+position = Vector2(-14, -58)
+
+[node name="Backboard" parent="SortableObjects" instance=ExtResource("23_y8vkm")]
+position = Vector2(1362, 504)
+
+[node name="Bookshelf_lower3" parent="SortableObjects" instance=ExtResource("16_0kwsf")]
+position = Vector2(1087, 387)
+
+[node name="Desk_vertical" parent="SortableObjects" instance=ExtResource("23_xmlcy")]
+position = Vector2(1202, 456)
+
+[node name="Chair_vertical" parent="SortableObjects" instance=ExtResource("24_f82a7")]
+position = Vector2(1171, 448)
+
+[node name="Classmate" parent="SortableObjects/Chair_vertical" instance=ExtResource("25_62kci")]
+position = Vector2(-1, -8)
+
+[node name="Desk_vertical2" parent="SortableObjects" instance=ExtResource("23_xmlcy")]
+position = Vector2(1090, 541)
+
+[node name="Chair_vertical2" parent="SortableObjects" instance=ExtResource("24_f82a7")]
+position = Vector2(1059, 533)
+
+[node name="Classmate" parent="SortableObjects/Chair_vertical2" instance=ExtResource("25_62kci")]
+position = Vector2(-1, -8)
+
+[node name="Classmate1" parent="SortableObjects" instance=ExtResource("26_701u2")]
+position = Vector2(1333, 508)
+
+[node name="Classmate2" parent="SortableObjects" instance=ExtResource("27_s8oi1")]
+position = Vector2(765, 265)
+dialogue_resource = ExtResource("30_jq2sk")
+
+[node name="Classmate_3" parent="SortableObjects" instance=ExtResource("28_i6q0e")]
+position = Vector2(610, 437)
+
+[node name="Chair_back_sustainguy" parent="SortableObjects" instance=ExtResource("29_bmdw8")]
+position = Vector2(610, 465)
+
+[node name="Chair_back_sustainguy2" parent="SortableObjects" instance=ExtResource("29_bmdw8")]
+position = Vector2(817, 461)
+
+[node name="Classmate_4" parent="SortableObjects" instance=ExtResource("28_i6q0e")]
+position = Vector2(817, 433)
+
+[node name="Classmate_5" parent="SortableObjects" instance=ExtResource("28_i6q0e")]
+position = Vector2(660, 520)
+
+[node name="Chair_back_sustainguy3" parent="SortableObjects" instance=ExtResource("29_bmdw8")]
+position = Vector2(660, 548)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture = SubResource("AtlasTexture_qsp4k")

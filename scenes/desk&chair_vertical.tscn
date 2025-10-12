@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://jscqv5wyghew"]
+
+[ext_resource type="Texture2D" uid="uid://853igyxsruv0" path="res://assets/objects/desk&chair_vertical_0.png" id="1_xy2kx"]
+
+[node name="Desk&Chair_vertical" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xy2kx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-35, 22, 33, 23, 32, -25, 2, -25, 2, -11, -31, -11, -35, -11)

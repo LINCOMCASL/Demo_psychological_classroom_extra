@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://780tvlsjj20q"]
+
+[ext_resource type="Texture2D" uid="uid://b3fwwhwd3rrxd" path="res://assets/objects/newsboard_0.png" id="1_jon14"]
+
+[node name="Nesboard" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jon14")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-39, 5, 39, 5, 39, -19, -39, -20)

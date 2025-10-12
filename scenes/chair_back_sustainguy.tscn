@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4tuvvqhe02qx"]
+
+[ext_resource type="Texture2D" uid="uid://irv7d5cirnxu" path="res://assets/objects/chair_back_sustainguy.png" id="1_hcoj4"]
+
+[node name="Chair_back_sustainguy" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hcoj4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-22, 13, 22, 13, 21, -13, -21, -13)

@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddwvgow2ol72g"]
+
+[ext_resource type="Script" uid="uid://b686v706klwai" path="res://blackboard_popup.gd" id="1_nllb4"]
+
+[node name="BlackboardPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nllb4")
+
+[node name="EnlargedBlackboard" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -407.0
+offset_top = 86.0
+offset_right = 520.0
+offset_bottom = -167.0
+grow_horizontal = 2
+grow_vertical = 2

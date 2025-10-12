@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cot3igyd0dh1k"]
+
+[ext_resource type="Texture2D" uid="uid://b14s0c28ac7r1" path="res://assets/objects/blackboard_1.png" id="1_7nlrx"]
+[ext_resource type="Script" uid="uid://dxi5iuurhlhsg" path="res://scenes/blackboard.gd" id="1_4847c"]
+[ext_resource type="PackedScene" uid="uid://cm0fdcshqf3sx" path="res://交互/actionable.tscn" id="2_wbyqp"]
+[ext_resource type="Resource" uid="uid://hg7v4m1ryhtw" path="res://with_blackboard.dialogue" id="3_7nlrx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nlrx"]
+size = Vector2(64, 32)
+
+[node name="Blackboard" type="StaticBody2D"]
+script = ExtResource("1_4847c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7nlrx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-42, 7, 42, 7, 42, -31, -42, -31)
+
+[node name="Actionable" parent="." instance=ExtResource("2_wbyqp")]
+dialogue_resource = ExtResource("3_7nlrx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+position = Vector2(-1, 6)
+shape = SubResource("RectangleShape2D_7nlrx")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://bs1d3nqsefkl"]
+
+[ext_resource type="Script" uid="uid://cwvdemtu3dmgs" path="res://scenes/window_red.gd" id="1_k0gcy"]
+[ext_resource type="Texture2D" uid="uid://byyadys64pdti" path="res://assets/objects/window_red.png" id="1_y3noi"]
+[ext_resource type="Texture2D" uid="uid://c0rhhciykq325" path="res://assets/字体/1_Generic.png" id="3_5xclg"]
+[ext_resource type="PackedScene" uid="uid://cm0fdcshqf3sx" path="res://交互/actionable.tscn" id="4_ng62a"]
+[ext_resource type="Resource" uid="uid://ckqaeayqpl3fc" path="res://with_curtain.dialogue" id="5_4e55j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng62a"]
+atlas = ExtResource("3_5xclg")
+region = Rect2(142, 3406, 70, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng62a"]
+size = Vector2(111, 72)
+
+[node name="Window_red" type="StaticBody2D"]
+script = ExtResource("1_k0gcy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_y3noi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-46, -1, 46, -2, 46, -32, -46, -32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-4.29153e-06, -1.5)
+scale = Vector2(1.51429, 1.23214)
+texture = SubResource("AtlasTexture_ng62a")
+
+[node name="Actionable" parent="." instance=ExtResource("4_ng62a")]
+dialogue_resource = ExtResource("5_4e55j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_ng62a")

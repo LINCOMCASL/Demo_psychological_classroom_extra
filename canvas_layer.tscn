@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk1vyp3ga004j"]
+
+[ext_resource type="Texture2D" uid="uid://b14s0c28ac7r1" path="res://assets/objects/blackboard_1.png" id="1_tg4cr"]
+[ext_resource type="Script" uid="uid://cub8plkwfi6dd" path="res://黑板图像.gd" id="2_37rai"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -35)
+scale = Vector2(15.9865, 12.0506)
+texture = ExtResource("1_tg4cr")
+centered = false
+script = ExtResource("2_37rai")
