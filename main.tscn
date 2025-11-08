@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://8g7ros3v3t1u"]
+[gd_scene load_steps=36 format=3 uid="uid://8g7ros3v3t1u"]
 
 [ext_resource type="Texture2D" uid="uid://bl3cne5hrpia" path="res://assets/background.png" id="1_1wd8f"]
 [ext_resource type="PackedScene" uid="uid://dvgskqenafhsu" path="res://player.tscn" id="1_i5757"]
@@ -32,6 +32,8 @@
 [ext_resource type="PackedScene" uid="uid://bykpmmswklldk" path="res://scenes/classmate_3.tscn" id="28_i6q0e"]
 [ext_resource type="PackedScene" uid="uid://c4tuvvqhe02qx" path="res://scenes/chair_back_sustainguy.tscn" id="29_bmdw8"]
 [ext_resource type="Resource" uid="uid://daw3trse6txxw" path="res://with_teacher.dialogue" id="30_jq2sk"]
+[ext_resource type="PackedScene" uid="uid://3lyiidt56ooc" path="res://scene_transition.tscn" id="33_jq2sk"]
+[ext_resource type="PackedScene" uid="uid://by6i04skkcwbq" path="res://scenes/music_player.tscn" id="34_4k2k6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qsp4k"]
 
@@ -94,8 +96,11 @@ polygon = PackedVector2Array(1128, 608, 1128, 657, 1368, 658, 1368, 609)
 [node name="SortableObjects" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="Door_3" parent="SortableObjects" instance=ExtResource("3_4lpyf")]
+position = Vector2(984, 646)
+
 [node name="Player" parent="SortableObjects" instance=ExtResource("1_i5757")]
-position = Vector2(675, 265)
+position = Vector2(984, 719)
 
 [node name="Door_1" parent="SortableObjects" instance=ExtResource("3_4lpyf")]
 position = Vector2(576, 631)
@@ -175,10 +180,10 @@ position = Vector2(708, 679)
 position = Vector2(885, 687)
 
 [node name="Classbox5" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
-position = Vector2(961, 680)
+position = Vector2(527, 679)
 
 [node name="Classbox6" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
-position = Vector2(1015, 680)
+position = Vector2(1339, 681)
 
 [node name="Classbox7" parent="SortableObjects" instance=ExtResource("15_1r7vc")]
 position = Vector2(1195, 679)
@@ -253,7 +258,13 @@ position = Vector2(660, 520)
 [node name="Chair_back_sustainguy3" parent="SortableObjects" instance=ExtResource("29_bmdw8")]
 position = Vector2(660, 548)
 
+[node name="SceneTransition" parent="SortableObjects" instance=ExtResource("33_jq2sk")]
+position = Vector2(986, 676)
+next_scene_path = "uid://bceouons15h1"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 texture = SubResource("AtlasTexture_qsp4k")
+
+[node name="MusicPlayer" parent="." instance=ExtResource("34_4k2k6")]

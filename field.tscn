@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://bceouons15h1"]
+
+[ext_resource type="Texture2D" uid="uid://bqrhokyyplkb" path="res://assets/school_field.png" id="1_0cutk"]
+[ext_resource type="PackedScene" uid="uid://dvgskqenafhsu" path="res://player.tscn" id="2_6e7u2"]
+[ext_resource type="PackedScene" uid="uid://bcgfuh08blmhj" path="res://scenes/door.tscn" id="3_ujqnb"]
+[ext_resource type="PackedScene" uid="uid://pbueukjqsej6" path="res://scene_transition_2.tscn" id="4_srqns"]
+[ext_resource type="PackedScene" uid="uid://dkx3fl4nm6akv" path="res://scenes/teacher.tscn" id="5_vm625"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e7u2"]
+
+[node name="Field" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_0cutk")
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(1457, 148, 457, 150, 457, 55, 1463, 51)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(458, 149, 454, 968, 426, 968, 427, 147)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(454, 969, 1463, 970, 1462, 999, 455, 992)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(1462, 968, 1485, 967, 1482, 152, 1459, 152)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(764, 694, 765, 849, 862, 848, 862, 692)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(1055, 846, 1054, 692, 1147, 692, 1150, 847)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(1294, 615, 1295, 729, 1440, 728, 1440, 614)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(457, 187, 548, 188, 548, 150, 456, 150)
+
+[node name="SortableObjects" type="Node2D" parent="."]
+
+[node name="Player" parent="SortableObjects" instance=ExtResource("2_6e7u2")]
+position = Vector2(951, 180)
+
+[node name="Door" parent="SortableObjects" instance=ExtResource("3_ujqnb")]
+position = Vector2(950, 53)
+
+[node name="SceneTransition_2" parent="SortableObjects" instance=ExtResource("4_srqns")]
+position = Vector2(949, 115)
+next_scene_path = "uid://8g7ros3v3t1u"
+
+[node name="Teacher5" parent="SortableObjects" instance=ExtResource("5_vm625")]
+position = Vector2(551, 656)
+
+[node name="Teacher4" parent="SortableObjects" instance=ExtResource("5_vm625")]
+position = Vector2(1357, 785)
+
+[node name="Teacher3" parent="SortableObjects" instance=ExtResource("5_vm625")]
+position = Vector2(577, 189)
+
+[node name="Teacher2" parent="SortableObjects" instance=ExtResource("5_vm625")]
+position = Vector2(822, 487)
+
+[node name="Teacher" parent="SortableObjects" instance=ExtResource("5_vm625")]
+position = Vector2(808, 663)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture = SubResource("AtlasTexture_6e7u2")

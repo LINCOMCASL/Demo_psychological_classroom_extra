@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://danfussnrb0pd"
+path="res://.godot/imported/樋口秀樹 - 学び舎で交わす挨拶.mp3-163e31bb4a2ee0ff1d66be492d21f48e.mp3str"
+
+[deps]
+
+source_file="res://assets/bgm/樋口秀樹 - 学び舎で交わす挨拶.mp3"
+dest_files=["res://.godot/imported/樋口秀樹 - 学び舎で交わす挨拶.mp3-163e31bb4a2ee0ff1d66be492d21f48e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

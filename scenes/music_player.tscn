@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://by6i04skkcwbq"]
+
+[ext_resource type="AudioStream" uid="uid://danfussnrb0pd" path="res://assets/bgm/樋口秀樹 - 学び舎で交わす挨拶.mp3" id="1_jxdhu"]
+[ext_resource type="Script" uid="uid://dgn3fi2rbqfrm" path="res://scenes/music_player.gd" id="1_ql6qh"]
+
+[node name="MusicPlayer" type="Node2D"]
+script = ExtResource("1_ql6qh")
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jxdhu")
+autoplay = true
